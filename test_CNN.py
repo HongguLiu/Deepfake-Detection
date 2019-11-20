@@ -8,7 +8,7 @@ import argparse
 import os
 import cv2
 from network.models import model_selection
-from dataset.transform import xception_default_data_transforms, xception_default_data_transforms_256, resnet_transforms, xception_transforms_org
+from dataset.transform import xception_default_data_transforms
 from dataset.mydataset import MyDataset
 def main():
 	args = parse.parse_args()
@@ -16,7 +16,7 @@ def main():
 	batch_size = args.batch_size
 	model_path = args.model_path
 	torch.backends.cudnn.benchmark=True
-	test_dataset = MyDataset(txt_path=test_list, transform=xception_transforms_org['test'])
+	test_dataset = MyDataset(txt_path=test_list, transform=xception_default_data_transforms['test'])
 	test_loader = torch.utils.data.DataLoader(test_dataset, batch_size=batch_size, shuffle=True, drop_last=True, num_workers=8)
 	test_dataset_size = len(test_dataset)
 	corrects = 0
@@ -46,7 +46,7 @@ if __name__ == '__main__':
 	parse = argparse.ArgumentParser(
 		formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 	parse.add_argument('--batch_size', '-bz', type=int, default=32)
-	parse.add_argument('--test_list', '-tl', type=str, default='./data_list/Deepfakes_c0_299.txt')
+	parse.add_argument('--test_list', '-tl', type=str, default='./data_list/Deepfakes_c0_test.txt')
 	parse.add_argument('--model_path', '-mp', type=str, default='./pretrained_model/df_c0_best.pkl')
 	main()
 	print('Hello world!!!')
