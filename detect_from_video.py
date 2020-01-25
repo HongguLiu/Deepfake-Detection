@@ -136,7 +136,8 @@ def test_full_image_network(video_path, model_path, output_path,
     if model_path is not None:
         # setting device on GPU if available, else CPU
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-        model = torch.load(model_path, map_location=device)
+        model.load_state_dict(torch.load(model_path, map_location=device))
+        # print(model.keys)
         print('Model found in {}'.format(model_path))
     else:
         print('No model found, initializing random model.')
