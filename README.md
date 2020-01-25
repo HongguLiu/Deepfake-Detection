@@ -9,7 +9,7 @@ The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requi
 ## Usage
 **To test with videos**
 
-`python detect_from_video.py --video_path ./videos/003_000.mp4 --model_path ./pretrained_model -o ./output --cuda`
+`python detect_from_video.py --video_path ./videos/003_000.mp4 --model_path ./pretrained_model/df_c0_best.pkl -o ./output --cuda`
 
 **To test with images**
 
@@ -18,7 +18,7 @@ The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requi
 **To train a model**
 
 `python train_CNN.py`
-(Please set the arguments after raed the code)
+(Please set the arguments after read the code)
 
 ## License
 The provided implementation is strictly for academic purposes only. Should you be interested in using our technology for any commercial use, please feel free to contact us.
