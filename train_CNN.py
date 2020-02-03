@@ -25,11 +25,6 @@ def main():
 	if not os.path.exists(output_path):
 		os.mkdir(output_path)
 	torch.backends.cudnn.benchmark=True
-	#creat train and val dataloader
-	#train_dataset = torchvision.datasets.ImageFolder(os.path.join(data_dir, 'train'), transform=xception_default_data_transforms_org['train'])
-	#val_dataset = torchvision.datasets.ImageFolder(os.path.join(data_dir, 'val'), transform=xception_default_data_transforms_org['test'])
-	#train_dataset = MyDataset_train(fake_path='/data-x/g12/kunlin/Face2Face/c0/images', real_path='/data-x/g12/kunlin/Origin/c0/images', transform=xception_default_data_transforms['train'])
-	#val_dataset = MyDataset_val(fake_path='/data-x/g12/kunlin/Face2Face/c0/images', real_path='/data-x/g12/kunlin/Origin/c0/images', transform=xception_default_data_transforms['val'])
 	train_dataset = MyDataset(txt_path=train_list, transform=xception_default_data_transforms['train'])
 	val_dataset = MyDataset(txt_path=val_list, transform=xception_default_data_transforms['val'])
 	train_loader = torch.utils.data.DataLoader(train_dataset, batch_size=batch_size, shuffle=True, drop_last=False, num_workers=8)
@@ -41,7 +36,6 @@ def main():
 		model.load_state_dict(torch.load(model_path))
 	model = model.cuda()
 	criterion = nn.CrossEntropyLoss()
-	#optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9, weight_decay=0.001)
 	optimizer = optim.Adam(model.parameters(), lr=0.001, betas=(0.9, 0.999), eps=1e-08)
 	scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.5)
 	model = nn.DataParallel(model)

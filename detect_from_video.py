@@ -21,7 +21,7 @@ from PIL import Image as pil_image
 from tqdm import tqdm
 
 from network.models import model_selection
-from dataset.transform import xception_default_data_transforms_org
+from dataset.transform import xception_default_data_transforms
 
 
 def get_boundingbox(face, width, height, scale=1.3, minsize=None):
@@ -132,7 +132,7 @@ def test_full_image_network(video_path, model_path, output_path,
     face_detector = dlib.get_frontal_face_detector()
 
     # Load model
-    model, *_ = model_selection(modelname='xception', num_out_classes=2)
+    model = model_selection(modelname='xception', num_out_classes=2)
     if model_path is not None:
         model = torch.load(model_path)
         print('Model found in {}'.format(model_path))

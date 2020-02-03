@@ -21,7 +21,6 @@ def main():
 	test_dataset_size = len(test_dataset)
 	corrects = 0
 	acc = 0
-	#model = torch.load(model_path)
 	#model = torchvision.models.densenet121(num_classes=2)
 	model = model_selection(modelname='xception', num_out_classes=2, dropout=0.5)
 	model.load_state_dict(torch.load(model_path))
