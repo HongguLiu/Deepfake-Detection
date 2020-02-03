@@ -9,6 +9,7 @@ import os
 import cv2
 
 from network.models import model_selection
+from network.mesonet import Meso4, MesoInception4
 from dataset.transform import xception_default_data_transforms
 from dataset.mydataset import MyDataset
 def main():
