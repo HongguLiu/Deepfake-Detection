@@ -2,7 +2,7 @@
 ------------------
 The Pytorch implemention of Deepfake Detection based on [Faceforensics++](https://github.com/ondyari/FaceForensics)
 
-We also reprocuded the [MesoNet with pytorch version](https://github.com/HongguLiu/MesoNet-Pytorch), and you can use the mesonet network in this project.
+We also reproduced the [MesoNet with pytorch version](https://github.com/HongguLiu/MesoNet-Pytorch), and you can use the mesonet network in this project.
 ## Install & Requirements
 The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requirements.txt` for more details.
 ### To install the python packages
