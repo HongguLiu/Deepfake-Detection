@@ -67,7 +67,7 @@ def preprocess_image(image, cuda=True):
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     # Preprocess using the preprocessing function used during training and
     # casting it to PIL image
-    preprocess = xception_default_data_transforms_org['test']
+    preprocess = xception_default_data_transforms['test']
     preprocessed_image = preprocess(pil_image.fromarray(image))
     # Add first dimension as the network expects a batch
     preprocessed_image = preprocessed_image.unsqueeze(0)
