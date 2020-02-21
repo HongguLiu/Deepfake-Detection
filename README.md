@@ -8,6 +8,10 @@ The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requi
 ### To install the python packages
 `python -m pip install -r requiremnets.txt`
 
+
+## Dataset
+You can train the model with full images, but we suggest you take only face region as input.
+
 ## Usage
 **To test with videos**
 
@@ -22,5 +26,9 @@ The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requi
 `python train_CNN.py`
 (Please set the arguments after read the code)
 
+## About
+If our project is helpful to you, we hope you can star and fork it. If there are any questions and suggestions, please feel free to contact us.
+
+Thanks for your support.
 ## License
 The provided implementation is strictly for academic purposes only. Should you be interested in using our technology for any commercial use, please feel free to contact us.
