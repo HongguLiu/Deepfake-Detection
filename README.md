@@ -15,7 +15,9 @@ If you want to use the opensource dataset [Faceforensics++](https://github.com/o
 You can train the model with full images, but we suggest you take only face region as input.
 
 ## Pretrained Model
-The model provided just be used to test the effectiveness of our code. We suggest you train you own models based on your dataset. And we will upload models which have better performance as soon as possible.
+The model provided just be used to test the effectiveness of our code. We suggest you train you own models based on your dataset. 
+
+And we will upload models which have better performance as soon as possible.
 
 ## Usage
 **To test with videos**
