@@ -10,7 +10,11 @@ The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requi
 
 
 ## Dataset
+If you want to use the opensource dataset [Faceforensics++](https://github.com/ondyari/FaceForensics), you can use the script './download-FaceForensics_v3.py' to download the dataset accroding the instructions of [download section](https://github.com/ondyari/FaceForensics/blob/master/dataset/README.md).
 You can train the model with full images, but we suggest you take only face region as input.
+
+## Pretrained Model
+The model provided just be used to test the effectiveness of our code. We suggest you train you own models based on your dataset. And we will upload models which have better performance as soon as possible.
 
 ## Usage
 **To test with videos**
