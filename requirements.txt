@@ -1,4 +1,4 @@
 opencv=3.4.2
 dlib==19.18.0
 numpy==1.17.3
-pillow==6.2.1
+pillow>=6.2.2
