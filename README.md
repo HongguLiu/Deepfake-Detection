@@ -19,6 +19,8 @@ The model provided just be used to test the effectiveness of our code. We sugges
 
 And we will upload models which have better performance as soon as possible.
 
+we provide some [pretrained model](https://drive.google.com/drive/folders/1GNtk3hLq6sUGZCGx8fFttvyNYH8nrQS8?usp=sharing) based on FaceForensics++
+
 ## Usage
 **To test with videos**
 
