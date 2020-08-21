@@ -8,7 +8,7 @@ The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requi
 ### To install the python packages
 `python -m pip install -r requirements.txt`
 
-Althogh you can install all dependencies at a time. But it is easy to install dlib via `conda install -c conda-forge dlib`
+Although you can install all dependencies at a time. But it is easy to install dlib via `conda install -c conda-forge dlib`
 
 
 ## Dataset
