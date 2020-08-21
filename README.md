@@ -8,6 +8,8 @@ The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requi
 ### To install the python packages
 `python -m pip install -r requirements.txt`
 
+Althogh you can install all dependencies at a time. But it is easy to install dlib via `conda install -c conda-forge dlib`
+
 
 ## Dataset
 If you want to use the opensource dataset [Faceforensics++](https://github.com/ondyari/FaceForensics), you can use the script './download-FaceForensics_v3.py' to download the dataset accroding the instructions of [download section](https://github.com/ondyari/FaceForensics/blob/master/dataset/README.md).
