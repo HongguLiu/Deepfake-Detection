@@ -6,7 +6,7 @@ We also reproduced the [MesoNet with pytorch version](https://github.com/HongguL
 ## Install & Requirements
 The code has been tested on pytorch=1.3.1 and python 3.6, please refer to `requirements.txt` for more details.
 ### To install the python packages
-`python -m pip install -r requiremnets.txt`
+`python -m pip install -r requirements.txt`
 
 
 ## Dataset
