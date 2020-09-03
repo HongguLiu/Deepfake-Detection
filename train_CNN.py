@@ -46,7 +46,7 @@ def main():
 	for epoch in range(epoches):
 		print('Epoch {}/{}'.format(epoch+1, epoches))
 		print('-'*10)
-		model=model.train()
+		model.train()
 		train_loss = 0.0
 		train_corrects = 0.0
 		val_loss = 0.0
