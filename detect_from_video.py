@@ -133,9 +133,9 @@ def test_full_image_network(video_path, model_path, output_path,
 
     # Load model
     model = model_selection(modelname='xception', num_out_classes=2, dropout=0.5)
-	model.load_state_dict(torch.load(model_path))
-	if isinstance(model, torch.nn.DataParallel):
-		model = model.module
+    model.load_state_dict(torch.load(model_path))
+    if isinstance(model, torch.nn.DataParallel):
+        model = model.module
     if cuda:
         model = model.cuda()
 
