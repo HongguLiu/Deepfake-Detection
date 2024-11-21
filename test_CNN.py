@@ -23,7 +23,7 @@ def main():
 	acc = 0
 	#model = torchvision.models.densenet121(num_classes=2)
 	model = model_selection(modelname='xception', num_out_classes=2, dropout=0.5)
-	model.load_state_dict(torch.load(model_path))
+	model.load_state_dict(torch.load(model_path),strict = True)
 	if isinstance(model, torch.nn.DataParallel):
 		model = model.module
 	model = model.cuda()
@@ -45,7 +45,7 @@ if __name__ == '__main__':
 	parse = argparse.ArgumentParser(
 		formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 	parse.add_argument('--batch_size', '-bz', type=int, default=32)
-	parse.add_argument('--test_list', '-tl', type=str, default='./data_list/Deepfakes_c0_test.txt')
-	parse.add_argument('--model_path', '-mp', type=str, default='./pretrained_model/df_c0_best.pkl')
+	parse.add_argument('--test_list', '-tl', type=str, default='./last_labels.txt')
+	parse.add_argument('--model_path', '-mp', type=str, default='./pretrained_model/ffpp_c23.pth')
 	main()
 	print('Hello world!!!')
